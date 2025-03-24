@@ -7,6 +7,7 @@
 
 - Mon - Tue
 - Course page: https://carpentries-incubator.github.io/bioc-intro
+- data: https://github.com/carpentries-incubator/bioc-intro/raw/main/episodes/data/rnaseq.csv
 
 ## RNA-seq analysis with Bioconductor
 
