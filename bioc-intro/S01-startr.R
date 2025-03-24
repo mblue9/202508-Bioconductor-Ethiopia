@@ -93,13 +93,114 @@ class(c(TRUE, FALSE))
 ## Ex
 
 num_char <- c(1, 2, 3, "a")
+num_char
+class(num_char)
+
 num_logical <- c(1, 2, 3, TRUE, FALSE)
+num_logical
+class(num_logical)
+
 char_logical <- c("a", "b", "c", TRUE)
+char_logical
+class(char_logical)
+
 tricky <- c(1, 2, 3, "4")
+tricky
+
+ls()
+rm(molecuels)
+ls()
+
+## Subsetting
+
+molecules <- c("dna", "rna", 
+               "protein", "metabolite")
 
 
+molecules
+
+molecules[c(1, 2)]
+
+## Ex: dna protein
+
+molecules[c(1, 3)]
+
+## Ex: protein dna 
+
+molecules[c(3, 1)]
+
+## Ex: dna dna dna 
+
+molecules[c(1, 1, 1)]
+
+## Ex: dna rna metabolite
+
+molecules[c(1, 2, 4)]
+
+molecules[-3]
+
+weight_g
+weight_g[c(1, 3)]
 
 
+weight_g[c(TRUE, FALSE, TRUE, FALSE)]
+
+weight_g > 62
+
+weight_g[weight_g > 62]
+
+## weights > 66 or < 61
+
+weight_g > 66
+weight_g < 61
+
+weight_g[weight_g < 61 | weight_g > 66]
+
+## weights > 66 and < 61
+
+weight_g > 66
+weight_g < 61
+
+weight_g[weight_g > 66 & weight_g < 61]
+
+
+molecules[molecules == "dna" | molecules == "rna"]
+
+nucl <- c("dna", "rna", "rrna", "mrna", 
+          "trna", "lnrna")
+
+molecules[molecules %in% nucl]
+
+
+## Names
+
+weight_g
+names(weight_g)
+
+names(weight_g) <- c("Fab", 
+                     "Maria",
+                     "Zedias", 
+                     "Laurent")
+
+weight_g
+
+weight_g[c("Fab", "Zedias")]
+
+## Ex: extract Maria's and Laurent's weights
+
+weight_g[c("Maria", "Laurent")]
+
+weight_g[c(2, 4)]
+
+
+c(10, 1, NA)
+
+
+mean(c(10, 11, 12))
+
+mean(c(10, 11, 12, NA))
+
+mean(c(10, 11, 12, NA), na.rm = TRUE)
 
 
 
