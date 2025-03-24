@@ -5,11 +5,17 @@
 
 ## Introduction to data analysis with R and Bioconductor
 
+- Mon - Tue
 - Course page: https://carpentries-incubator.github.io/bioc-intro
 
 ## RNA-seq analysis with Bioconductor
 
+- Wed - Thu
 - Course page: https://carpentries-incubator.github.io/bioc-rnaseq/
+
+## Bring your own data
+
+- Fri
 
 ## Installation
 
