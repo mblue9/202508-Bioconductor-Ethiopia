@@ -10,3 +10,8 @@
 ## RNA-seq analysis with Bioconductor
 
 - Course page: https://carpentries-incubator.github.io/bioc-rnaseq/
+
+## Installation
+
+- [R](https://carpentries-incubator.github.io/bioc-intro/)
+- [RStudio](https://carpentries-incubator.github.io/bioc-intro/)
