@@ -1,5 +1,6 @@
 # Bioconductor Workshop Kenya
 
+- [Workshop page](https://training.bioconductor.org/workshops/2025-03-Nairobi/index.html)
 - This page: https://github.com/lgatto/202503-Bioconductor-Kenya
 - Shared notes: https://pad.carpentries.org/bioc-nairobi-2025
 
