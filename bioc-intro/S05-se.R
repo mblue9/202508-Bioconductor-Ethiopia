@@ -1,8 +1,7 @@
 library(SummarizedExperiment)
 
-
-install.packages("BiocManager")
-BiocManager::install("SummarizedExperiment")
+# install.packages("BiocManager")
+# BiocManager::install("SummarizedExperiment")
 
 ## Ex: How many samples?
 
@@ -43,3 +42,18 @@ gene_metadata <- read.csv("data/gene_metadata.csv")
 
 ## How many rows?
 nrow(gene_metadata)
+
+## 4. Create the SummarizedExperiment (SE)
+
+SummarizedExperiment(
+  assays = list(counts = count_matrix),
+  colData = sample_metadata,
+  rowData = gene_metadata
+)
+
+
+
+
+
+
+
