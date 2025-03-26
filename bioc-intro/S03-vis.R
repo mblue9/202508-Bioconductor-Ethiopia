@@ -15,6 +15,26 @@ ggplot(data = rna,
          x = expression)) +
   geom_histogram()
 
+# ggplot(data = rna, 
+#        mapping = aes(
+#          x = expression)) 
+# + geom_histogram()
+
+rna %>% 
+  filter(gene == "Dok3")
+
+# rna 
+# %>% filter(gene == "Dok3")
+
+
+2 * 5
+
+
+2 * 
+  5
+
+# 2
+# * 5
 
 ## Ex: Histogram of log2 of (expression + 1)
 
