@@ -123,11 +123,63 @@ rna_mean_time %>%
 ## differentiating the male and female mice.
 
 
+rna %>% 
+  ggplot(aes(
+    x = sample,
+    y = log(expression + 1)
+  )) +
+  geom_boxplot() +
+  geom_jitter()
 
 
+ggplot(rna,
+       aes(
+  x = sample,
+  y = log(expression + 1),
+  colour = sex
+)) +
+  geom_boxplot() 
+
+ggplot(rna,
+       aes(
+         x = sample,
+         y = log(expression + 1),
+         colour = sex
+       )) +
+  geom_boxplot() +
+  geom_jitter()
+
+ggplot(rna,
+       aes(
+         x = sample,
+         y = log(expression + 1),
+         colour = sex
+       )) +
+  geom_jitter() +
+  geom_boxplot() 
 
 
+ggplot(rna,
+       aes(
+         x = sample,
+         y = log(expression + 1)
+       )) +
+  geom_jitter(aes(colour = sex)) +
+  geom_boxplot() 
 
 
+ggplot(rna,
+       aes(
+         x = sample,
+         y = log(expression + 1)
+       )) +
+  geom_jitter(colour = "steelblue") +
+  geom_boxplot() 
 
-
+ggplot(rna,
+       aes(
+         x = sample,
+         y = log(expression + 1)
+       )) +
+  geom_jitter(colour = "steelblue") +
+  geom_boxplot(colour = "steelblue") 
