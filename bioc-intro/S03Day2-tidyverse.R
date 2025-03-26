@@ -57,6 +57,47 @@ rna %>% filter(sex =="Female",
                expression > 50000) %>% 
   select(gene,sample,time,expression,age)
 
+#mutate
+
+rna %>% mutate(time_hrs = time*24) %>% 
+  select(time, time_hrs)
+
+rna %>% mutate(time_hr = time*24,
+               time_min = time*60) %>% 
+  select(time, time_hr, time_min)
+
+
+#group based on genes , samples 
+
+rna %>%  group_by(gene)
+
+rna %>% group_by(sample)
+
+
+rna %>% group_by(gene) %>% 
+  summarise(mean_exp = mean(expression))
+
+rna %>% group_by(gene, time,infection) %>% 
+  summarise(mean_exp =mean(expression),
+            median_exp = median(expression))
+#count 
+
+rna %>% count(infection)
+
+rna %>% count(time)
+
+rna %>% group_by(time) %>% 
+  summarise(n=n())
+
+
+rna %>% group_by(time, infection)  %>% 
+  summarise(n=n()) %>% 
+  arrange(desc(time))
+
+
+rna %>% count(time, infection) %>% 
+  arrange(desc(n))
+
 
 #Ex 5.
 
