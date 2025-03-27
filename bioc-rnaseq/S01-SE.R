@@ -66,17 +66,4 @@ rse <- SummarizedExperiment(
 rse
 
 saveRDS(se, file = "data/se.rds")
-
 saveRDS(rse, file = "data/rse.rds")
-
-
-
-
-
-
-
-
-
-
-
-
