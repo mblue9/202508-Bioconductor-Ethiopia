@@ -5,6 +5,9 @@ library(tidyverse)
 library(DESeq2)
 library(vsn)
 
+## Bioconductor package installation
+BiocManager::install("vsn")
+
 rse <- readRDS("data/rse.rds")
 
 ## Ex: Find and remove unexpressed genes.
@@ -119,9 +122,24 @@ colData(dds) %>%
 
 library(vsn)
 
-meanSdPlot
+meanSdPlot(assay(dds), ranks = FALSE)
 
 
+vsd <- vst(dds, blind = TRUE)
+meanSdPlot(assay(vsd), ranks = FALSE)
 
+## Principal Component Analyis
 
+pcaData <- plotPCA(vsd, intgroup = c("sex", "time"),
+                   returnData = TRUE)
+
+attributes(pcaData)
+
+pcaData %>% 
+  ggplot(aes(
+    x = PC1,
+    y = PC2,
+    colour = group
+  )) + 
+  geom_point(size = 5)
 
