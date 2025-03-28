@@ -64,20 +64,20 @@ se$libSize
 
 View(libSize)
 
-colData(se) %>% 
-  as.data.frame() %>% 
+colData(se) %>%
+  as.data.frame() %>%
   ggplot(aes(
-   x = geo_accession, 
+   x = geo_accession,
    y = libSize,
    fill = time
    )) +
   geom_bar(stat = "identity")
 
 
-colData(se) %>% 
-  as.data.frame() %>% 
+colData(se) %>%
+  as.data.frame() %>%
   ggplot(aes(
-    x = geo_accession, 
+    x = geo_accession,
     y = libSize,
     fill = sex
   )) +
@@ -99,19 +99,19 @@ colData(dds)
 
 ## Visualize the size factors.
 
-colData(dds) %>% 
-  as.data.frame() %>% 
+colData(dds) %>%
+  as.data.frame() %>%
   ggplot(aes(
-    x = geo_accession, 
+    x = geo_accession,
     y = sizeFactor,
     fill = sex
   )) +
   geom_bar(stat = "identity")
 
-colData(dds) %>% 
-  as.data.frame() %>% 
+colData(dds) %>%
+  as.data.frame() %>%
   ggplot(aes(
-    x = geo_accession, 
+    x = geo_accession,
     y = sizeFactor,
     fill = time
   )) +
@@ -135,11 +135,29 @@ pcaData <- plotPCA(vsd, intgroup = c("sex", "time"),
 
 attributes(pcaData)
 
-pcaData %>% 
+pcaData %>%
   ggplot(aes(
     x = PC1,
     y = PC2,
     colour = group
-  )) + 
+  )) +
   geom_point(size = 5)
 
+attr(pcaData, "percentVar")
+
+## iSEE
+
+## Convert DESeqDataSet object to a SingleCellExperiment object, in order to
+## be able to store the PCA representation
+sce <- as(dds, "SingleCellExperiment")
+
+## Add PCA to the 'reducedDim' slot
+stopifnot(rownames(pcaData) == colnames(sce))
+reducedDim(sce, "PCA") <- as.matrix(pcaData[, c("PC1", "PC2")])
+
+## Add variance-stabilized data as a new assay
+stopifnot(colnames(vsd) == colnames(sce))
+assay(sce, "vsd") <- assay(vsd)
+
+app <- iSEE(sce)
+shiny::runApp(app)
