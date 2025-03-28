@@ -145,10 +145,25 @@ pcaData %>%
 
 attr(pcaData, "percentVar")
 
+sum(attr(pcaData, "percentVar"))
+
+
+BiocManager::install("factoextra")
+library(factoextra)
+
+assay(vsd)[1:100, ] %>% 
+  prcomp() %>% 
+  fviz_pca_ind()  
+
+cor(t(assay(vsd)[1:5, ]))
+
+
+
 ## iSEE
 
 ## Convert DESeqDataSet object to a SingleCellExperiment object, in order to
 ## be able to store the PCA representation
+library(SingleCellExperiment)
 sce <- as(dds, "SingleCellExperiment")
 
 ## Add PCA to the 'reducedDim' slot
@@ -159,5 +174,6 @@ reducedDim(sce, "PCA") <- as.matrix(pcaData[, c("PC1", "PC2")])
 stopifnot(colnames(vsd) == colnames(sce))
 assay(sce, "vsd") <- assay(vsd)
 
+library(iSEE)
 app <- iSEE(sce)
 shiny::runApp(app)
