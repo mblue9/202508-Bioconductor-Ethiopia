@@ -23,3 +23,5 @@
 
 - [R](https://carpentries-incubator.github.io/bioc-intro/)
 - [RStudio](https://carpentries-incubator.github.io/bioc-intro/)
+
+![Bioconductor Workshop Kenya group picture](./figs/group_photo.jpg)
