@@ -9,6 +9,7 @@
 - Mon - Tue
 - Course page: https://carpentries-incubator.github.io/bioc-intro
 - data: https://github.com/carpentries-incubator/bioc-intro/raw/main/episodes/data/rnaseq.csv
+- Messy COVID data [files](https://github.com/lgatto/202503-Bioconductor-Kenya/tree/main/messy)
 - RStudio project: [bioc-intro](https://github.com/lgatto/202503-Bioconductor-Kenya/tree/main/bioc-intro)
 
 ## RNA-seq analysis with Bioconductor
@@ -26,5 +27,6 @@
 
 - [R](https://carpentries-incubator.github.io/bioc-intro/)
 - [RStudio](https://carpentries-incubator.github.io/bioc-intro/)
-
+- Download all files as a [zip file](https://github.com/lgatto/202503-Bioconductor-Kenya/archive/refs/heads/main.zip).
+- 
 ![Bioconductor Workshop Kenya group picture](./figs/group_photo.jpg)
