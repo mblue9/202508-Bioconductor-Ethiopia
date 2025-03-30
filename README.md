@@ -16,8 +16,8 @@
 
 - Wed - Thu
 - Course page: https://carpentries-incubator.github.io/bioc-rnaseq/
-- RStudio project (group Fabricio and Zedias): [bioc-rnaseq2](https://github.com/lgatto/202503-Bioconductor-Kenya/tree/main/bioc-rnaseq2)
-- RStudio project (group Laurent and Mike): [bioc-rnaseq](https://github.com/lgatto/202503-Bioconductor-Kenya/tree/main/bioc-rnaseq)
+- RStudio project (group Fabricio, Laura and Zedias): [bioc-rnaseq2](https://github.com/lgatto/202503-Bioconductor-Kenya/tree/main/bioc-rnaseq2)
+- RStudio project (group Laurent, Laura and Mike): [bioc-rnaseq](https://github.com/lgatto/202503-Bioconductor-Kenya/tree/main/bioc-rnaseq)
 
 ## Bring your own data
 
