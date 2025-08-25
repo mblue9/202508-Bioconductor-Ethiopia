@@ -9,7 +9,7 @@
 - Mon - Tue
 - Course page: https://carpentries-incubator.github.io/bioc-intro
 - data: https://github.com/carpentries-incubator/bioc-intro/raw/main/episodes/data/rnaseq.csv
-- Messy COVID data [files](https://github.com/mblue9/202508-Bioconductor-Ehtiopia/tree/main/messy)
+- Messy COVID data [files](https://github.com/mblue9/202508-Bioconductor-Ethiopia/tree/main/messy)
 - RStudio project: [bioc-intro](https://github.com/mblue9/202508-Bioconductor-Ethiopia/tree/main/bioc-intro)
 
 ## RNA-seq analysis with Bioconductor
